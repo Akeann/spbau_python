@@ -1,0 +1,7 @@
+<class 'pure_python.Fate'> 54276433 0.704185330000007
+<class 'pure_cython.Fate'> 54276433 0.6357701500000076
+<class 'pyx_cython.Fate'> 54276433 0.1651219499999911
+<class 'mypy_python.Fate'> 54276433 0.6024139600000012
+<class 'numba.experimental.jitclass.base.Fate'> 54276433 1.428876610000009
+
+такие вот результаты воспроизведения замеров из примера «MyPy, Cython, Numba»
