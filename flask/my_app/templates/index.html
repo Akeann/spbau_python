@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poems</title>
+</head>
+<body>
+
+    <p>
+        What to do today? — {{ hobby|random }} (refresh the page and you will see something new)
+    </p>
+
+    <h1>Poems that you can already read on this website</h1>
+    <a href="{{ url_for('new_post') }}"><button>Add New Poem</button></a>
+    <ul>
+        {% for post in posts %}
+        <li><a href="{{ url_for('get_post', post_id=post['id']) }}">{{ post['poem'] }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <p>What's going on here?</p>
+    <ul>
+      <li><a href="static.html">click!</a></li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Add New Poem</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form method="post">
+
+    <label for="poem">Title</label><br>
+    <input type="text" id="poem" name="poem"><br>
+
+    <label for="content">Content</label><br>
+    <textarea id="content" name="content"></textarea><br>
+
+    <label for="author">Author</label><br>
+    <input type="text" id="author" name="author"><br>
+
+    <input type="submit" value="Submit">
+
+  </form>
+{% endblock %}
